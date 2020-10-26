@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "nvm-without-admin-rights": {
+      "commandName": "Project",
+      "commandLineArgs": "use v8.0.0"
+    }
+  }
+}
