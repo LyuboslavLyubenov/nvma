@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace nvm_without_admin_rights
 {
+    /// <summary>
+    /// Command that when executed, lists all nodejs versions
+    /// </summary>
     class ListCommand : CustomCommand
     {
         public override async Task Execute(string[] args)

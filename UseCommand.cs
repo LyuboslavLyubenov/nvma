@@ -1,13 +1,13 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Net.Http;
-using System.Reflection;
 using System.Threading.Tasks;
 
 namespace nvm_without_admin_rights
 {
+    /// <summary>
+    /// Changes nodejs version to selected
+    /// </summary>
     class UseCommand : CustomCommand
     {
         public async override Task Execute(string[] args)
