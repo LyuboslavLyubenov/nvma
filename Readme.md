@@ -1,5 +1,6 @@
 # NVM-without-admin-rights
 
+![NVM-without-admin-rights](https://github.com/LyuboslavLyubenov/nvm-windows-without-admin-rights/blob/main/nvm-without-windows.gif)
 
 For the place i'm working on we dont have admin rights on our machines, so we cannot use nvm-windows developed by coreybutler and we also couldnt install dotnet. So i've created this tool.
 
