@@ -4,6 +4,15 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>nvm_without_admin_rights</RootNamespace>
+	
+	<PackageId>NvmWithoutAdminRights</PackageId>
+	<Version>1.0.0</Version>
+	<Authors>LyuboslavLyubenov</Authors>
+	<Company>LyuboslavLyubenov</Company>
+	<Title>NVM without admin rights</Title>	
+	<Description>Simple program that allows changing nodejs version without having admin rights.</Description>
+	<RepositoryUrl>https://github.com/LyuboslavLyubenov/nvm-windows-without-admin-rights</RepositoryUrl>
+	<Summary>Simple program that allows changing nodejs version without having admin rights.</Summary>
   </PropertyGroup>
 
   <ItemGroup>
