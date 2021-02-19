@@ -29,6 +29,11 @@ nvma.exe use <version>
 nvma.exe use v14.9.0
 ```
 
+To make nvma use everywhere, not only in nvma folder, execute makeglobal command.
+```
+nvma makeglobal
+```
+
 ## Issues
 
 If you have any problems, please open a issue.

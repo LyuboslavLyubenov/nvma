@@ -24,6 +24,18 @@ namespace nvma
             oldValue += ";" + value;
             Environment.SetEnvironmentVariable(name, oldValue, scope);
         }
+        /// <summary>
+        /// Check if some path is stored into user PATH variable
+        /// </summary>
+        /// <param name="value">value to check agains</param>
+        /// <returns>Returns true if it is defined in to the PATH variable, false if it does not</returns>
+        protected bool DoesExistInPath(string value)
+        {
+            var name = "PATH";
+            var scope = EnvironmentVariableTarget.User;
+            var pathValue = Environment.GetEnvironmentVariable(name, scope);
+            return pathValue.Split(';').Contains(value);
+        }
 
         /// <summary>
         /// Removes all values that contain current directory from User Path environment variable
