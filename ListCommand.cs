@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace nvm_without_admin_rights
+namespace nvma
 {
     /// <summary>
     /// Command that when executed, lists all nodejs versions

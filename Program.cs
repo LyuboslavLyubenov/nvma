@@ -1,9 +1,8 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace nvm_without_admin_rights
+namespace nvma
 {
     class Program
     {

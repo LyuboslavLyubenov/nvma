@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 
 
-namespace nvm_without_admin_rights
+namespace nvma
 {
     /// <summary>
     /// Command that returns all commands

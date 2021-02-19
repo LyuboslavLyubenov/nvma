@@ -1,10 +1,10 @@
-# NVM-without-admin-rights
+# NVMA
 
-![NVM-without-admin-rights](https://github.com/LyuboslavLyubenov/nvm-windows-without-admin-rights/blob/main/nvm-without-windows.gif)
+![NVMA](https://github.com/LyuboslavLyubenov/nvm-windows-without-admin-rights/blob/main/nvm-without-windows.gif)
 
 For the place i'm working on we dont have admin rights on our machines, so we cannot use nvm-windows developed by coreybutler and we also couldnt install dotnet. So i've created this tool.
 
-NVM-without-admin-rights "acts" like the https://github.com/coreybutler/nvm-windows, but without requiring admin rights for installing and using. 
+NVMA "acts" like the https://github.com/coreybutler/nvm-windows, but without requiring admin rights for installing and using. 
 It mimics only essential subset of features that are needed in order to get multiple versions of nodejs on your machine. 
 
 ## Prerequisites
@@ -19,18 +19,18 @@ Just download the archived binaries and start new cmd at extracted location.
 
 Lists all available commands, what they do and how are they used.
 ```
-nvm-without-admin-rights.exe help
+nvma.exe help
 ```
 
 Lists all nodejs version that you can use
 ```
-nvm-without-admin-rights.exe list
+nvma.exe list
 ```
 
 Changes your version
 ```
-nvm-without-admin-rights.exe use <version>
-nvm-without-admin-rights.exe use v14.9.0
+nvma.exe use <version>
+nvma.exe use v14.9.0
 ```
 
 ## Issues

@@ -3,7 +3,7 @@ using System.IO.Compression;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace nvm_without_admin_rights
+namespace nvma
 {
     /// <summary>
     /// Changes nodejs version to selected
@@ -36,7 +36,7 @@ namespace nvm_without_admin_rights
         public override string ToString()
         {
             return "Changes the version of your node instance. \n" +
-                "   Usage: nvm-without-admin-rights.exe use v14.9.0  \n" +
+                "   Usage: nvma.exe use v14.9.0  \n" +
                 "   If above if executed it will download nodejs version 14.9.0 and set it to your default";
         }
     }
