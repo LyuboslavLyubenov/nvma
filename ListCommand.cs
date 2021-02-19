@@ -18,7 +18,7 @@ namespace nvma
             var source = await response.Content.ReadAsStringAsync();
             var regex = new Regex("href=\"([A-Za-z0-9.-/]+)\"");
             var matches = regex.Matches(source);
-            var versions = matches.Select(match => match.Groups[1].Value).Where(match => match.StartsWith("v"));
+            var versions = matches.Select(match => match.Groups[1].Value.TrimEnd('/')).Where(match => match.StartsWith("v"));
 
             Console.WriteLine(string.Join('\n', versions));
         }

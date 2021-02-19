@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace nvma
@@ -10,6 +11,25 @@ namespace nvma
     /// </summary>
     public abstract class CustomCommand : ICustomCommand
     {
+        private string executableLocationDirectory = "";
+        protected string ExecutableLocationDirectory
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(this.executableLocationDirectory))
+                {
+                    return this.executableLocationDirectory;
+                }
+                this.executableLocationDirectory = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
+                this.executableLocationDirectory = Path.GetDirectoryName(this.executableLocationDirectory);
+                return this.executableLocationDirectory;
+            }
+            set
+            {
+
+            }
+        }
+
         public abstract Task Execute(string[] args);
 
         /// <summary>
@@ -46,7 +66,7 @@ namespace nvma
             var scope = EnvironmentVariableTarget.User;
             var oldValue = Environment.GetEnvironmentVariable(name, scope);
             var paths = oldValue.Split(';');
-            var currentPath = Directory.GetCurrentDirectory();
+            var currentPath = this.ExecutableLocationDirectory;
             var newPaths = paths.Where(path => !path.Contains(currentPath)).ToArray();
             var newValue = string.Join(';', newPaths);
             Environment.SetEnvironmentVariable(name, newValue, scope);

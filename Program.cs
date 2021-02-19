@@ -10,7 +10,8 @@ namespace nvma
         {
             var commandFromInput = args.Length == 0 ? "help" : args[0];
 
-            if (string.IsNullOrWhiteSpace(commandFromInput)) {
+            if (string.IsNullOrWhiteSpace(commandFromInput))
+            {
                 commandFromInput = "help";
             }
 
@@ -27,7 +28,7 @@ namespace nvma
             {
                 new HelpCommand().Execute(args).Wait();
             }
-            
+
             var commandInstance = (ICustomCommand)Activator.CreateInstance(commandType.First());
             commandInstance.Execute(args).Wait();
         }

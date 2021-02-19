@@ -12,15 +12,13 @@ namespace nvma
         {
             return Task.Run(() =>
             {
-                var currentPath = Directory.GetCurrentDirectory();
-
-                if (this.DoesExistInPath(currentPath))
+                if (this.DoesExistInPath(this.ExecutableLocationDirectory))
                 {
                     System.Console.WriteLine("Global NVMA is enabled already and should be accessible globally.");
                     return;
                 }
 
-                this.AddToPath(currentPath);
+                this.AddToPath(this.ExecutableLocationDirectory);
                 System.Console.WriteLine("You should be able to use nvma globally now! Please restart your cmd/terminal");
             });
         }
