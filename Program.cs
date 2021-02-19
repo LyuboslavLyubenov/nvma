@@ -8,13 +8,19 @@ namespace nvma
     {
         static void Main(string[] args)
         {
+            var commandFromInput = args.Length == 0 ? "help" : args[0];
+
+            if (string.IsNullOrWhiteSpace(commandFromInput)) {
+                commandFromInput = "help";
+            }
+
             var commandInterfaceType = typeof(ICustomCommand);
             var commandType = Assembly.GetExecutingAssembly()
                 .GetTypes()
                 .Where(
                     commandType =>
                         commandInterfaceType.IsAssignableFrom(commandType) &&
-                        commandType.Name.Replace("Command", "").ToLower() == args[0].ToLower()
+                        commandType.Name.Replace("Command", "").ToLower() == commandFromInput.ToLower()
                 );
 
             if (commandType.Count() == 0)
