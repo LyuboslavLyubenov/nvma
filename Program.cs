@@ -26,21 +26,10 @@ namespace nvma
             if (commandType.Count() == 0)
             {
                 new HelpCommand().Execute(args).Wait();
-
-#if DEBUG
-//easier to test
-                Console.ReadKey();
-#endif
-                return;
             }
-
+            
             var commandInstance = (ICustomCommand)Activator.CreateInstance(commandType.First());
             commandInstance.Execute(args).Wait();
-
-#if DEBUG
-//easier to test
-            Console.ReadKey();
-#endif
         }
     }
 }
