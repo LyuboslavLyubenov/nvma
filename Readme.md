@@ -1,7 +1,7 @@
 # NVMA
 
 NVMA is a tool that "acts" like the https://github.com/coreybutler/nvm-windows, but without requiring admin rights for installing and using. 
-It mimics only essential subset of features that are needed in order to get multiple versions of nodejs on your machine. 
+It mimics only essential subset of features that are needed in order to get multiple versions of nodejs. 
 
 ## Prerequisites
 
