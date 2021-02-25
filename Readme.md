@@ -9,7 +9,7 @@ You must uninstall nodejs, if you had it installed previously.
 
 ## How to install
 
-Just download the binary and execute it.
+Just download the binary and execute it from cmd
 
 ## Usage
 
